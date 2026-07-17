@@ -1,1 +1,372 @@
+<!DOCTYPE html>
 
+<html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vanessa | Calon Dokter &amp; Web Developer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#00665e",
+                    "on-secondary-container": "#576867",
+                    "background": "#f8fafa",
+                    "outline-variant": "#bdc9c8",
+                    "inverse-on-surface": "#eff1f1",
+                    "secondary-container": "#d4e6e5",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#00201d",
+                    "secondary": "#516161",
+                    "surface-container-highest": "#e1e3e3",
+                    "on-tertiary-fixed-variant": "#005049",
+                    "on-surface": "#191c1d",
+                    "surface-dim": "#d8dada",
+                    "surface-variant": "#e1e3e3",
+                    "on-secondary-fixed-variant": "#3a4a49",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#006a6a",
+                    "on-surface-variant": "#3e4949",
+                    "primary": "#006565",
+                    "tertiary-fixed": "#84f5e8",
+                    "on-primary-container": "#e3fffe",
+                    "surface-container-low": "#f2f4f4",
+                    "outline": "#6e7979",
+                    "secondary-fixed": "#d4e6e5",
+                    "tertiary-fixed-dim": "#66d9cc",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#e6e8e9",
+                    "primary-fixed": "#93f2f2",
+                    "on-background": "#191c1d",
+                    "tertiary-container": "#008177",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#76d6d5",
+                    "primary-container": "#008080",
+                    "on-secondary-fixed": "#0e1e1e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#eceeee",
+                    "surface-bright": "#f8fafa",
+                    "inverse-surface": "#2e3131",
+                    "on-tertiary-container": "#e5fffa",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#76d6d5",
+                    "surface": "#f8fafa",
+                    "on-primary-fixed": "#002020",
+                    "on-primary-fixed-variant": "#004f4f",
+                    "secondary-fixed-dim": "#b8cac9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "64px",
+                    "stack-md": "24px",
+                    "unit": "8px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "48px",
+                    "stack-sm": "8px",
+                    "container-max": "1120px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "headline-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        background-color: #F8FAFA;
+        color: #191c1d;
+        font-family: 'Inter', sans-serif;
+      }
+      .card-shadow {
+        box-shadow: 0px 4px 20px rgba(0, 106, 106, 0.12);
+      }
+      .card-shadow:hover {
+        box-shadow: 0px 8px 30px rgba(0, 106, 106, 0.18);
+        transform: translateY(-4px);
+        transition: all 0.3s ease;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .medical-cross::before {
+        content: '+';
+        color: #006565;
+        font-weight: bold;
+        margin-right: 8px;
+      }
+    </style>
+</head>
+<body class="bg-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">Vanessa.</span>
+<div class="hidden md:flex items-center gap-stack-md">
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 transition-colors duration-200" href="#home">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#about">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#showcase">My Study</a>
+<a class="ml-4 px-5 py-2 bg-primary text-on-primary rounded-full font-label-md text-label-md active:scale-95 transition-transform" href="#">Contact Me</a>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<section class="relative pt-32 pb-stack-lg md:pt-48 md:pb-32 overflow-hidden" id="home">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid md:grid-cols-2 gap-gutter items-center">
+<div class="z-10 order-2 md:order-1">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full mb-6">
+<span class="material-symbols-outlined text-[18px]">stethoscope</span>
+<span class="font-label-sm text-label-sm">Future Medical Professional</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-stack-sm">
+                            Halo, Saya Vanessa
+                        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-md max-w-[500px]">
+                            Siswi SMA, Calon Dokter Masa Depan, dan Web Developer yang Sedang Belajar.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<a class="px-8 py-4 bg-primary text-on-primary rounded-xl font-label-md text-label-md hover:bg-tertiary transition-all duration-300 active:scale-95 flex items-center gap-2" href="#showcase">
+                                Lihat Hasil Belajarku
+                                <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="px-8 py-4 border-2 border-primary text-primary rounded-xl font-label-md text-label-md hover:bg-secondary-container transition-all duration-300" href="#about">
+                                Kenali Saya
+                            </a>
+</div>
+</div>
+<div class="relative order-1 md:order-2 flex justify-center">
+<div class="relative w-full max-w-[400px] aspect-square rounded-[32px] overflow-hidden card-shadow">
+<img alt="Vanessa" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5I_G1P1zabgsZgV8aZcMYp5ZDdOyQD0qod5tyH25jxy_ziruK_Xx1sN3vpKvDL6d1ilue7TiEPpaI55H22teccwKkx8zSSGDpi3GZKDhVcwPOSqs5WzbSihFjqvo4PDKWauuBRH2Xr5MyVeH_TqdqIXzHOSScjggA1l3DOVbvnuQbDGCOXZkCvad0XJ2PSglKrsUX0plFXbUaCGM5Tc-pID4JVBbke3ecKsHPAVtfvQn60VTKvz9S"/>
+</div>
+<div class="absolute -bottom-6 -left-6 md:-left-12 bg-white p-4 rounded-2xl card-shadow flex items-center gap-4 animate-bounce">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">code</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-outline">Skill Aktif</p>
+<p class="font-label-md text-label-md text-on-surface">HTML5 &amp; CSS3</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute top-0 right-0 -z-10 opacity-20 transform translate-x-1/4 -translate-y-1/4">
+<div class="w-[600px] h-[600px] rounded-full bg-primary-container filter blur-[120px]"></div>
+</div>
+</section>
+<section class="py-stack-lg bg-surface-container-lowest" id="about">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-gutter items-start">
+<div class="md:w-1/3">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Tentang Saya</h2>
+<div class="h-1.5 w-24 bg-primary rounded-full"></div>
+</div>
+<div class="md:w-2/3">
+<div class="bg-white p-8 md:p-12 rounded-[24px] card-shadow border-l-8 border-primary">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-6">
+                                Saya adalah seorang siswi SMA yang memiliki impian besar di dunia medis sebagai dokter. Selain fokus pada pelajaran sekolah, saya juga menantang diri untuk mengeksplorasi dunia digital dengan belajar coding HTML &amp; CSS.
+                            </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                                Saya percaya bahwa kombinasi ilmu medis dan teknologi akan sangat berguna di masa depan! Dengan memahami dasar-dasar pengembangan web, saya berharap dapat berkontribusi lebih banyak dalam digitalisasi layanan kesehatan nantinya.
+                            </p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+<div class="p-4 bg-background rounded-xl text-center">
+<span class="material-symbols-outlined text-primary mb-2">school</span>
+<p class="font-label-sm text-label-sm">Akademik</p>
+</div>
+<div class="p-4 bg-background rounded-xl text-center">
+<span class="material-symbols-outlined text-primary mb-2">science</span>
+<p class="font-label-sm text-label-sm">Biologi</p>
+</div>
+<div class="p-4 bg-background rounded-xl text-center">
+<span class="material-symbols-outlined text-primary mb-2">terminal</span>
+<p class="font-label-sm text-label-sm">Web Dev</p>
+</div>
+<div class="p-4 bg-background rounded-xl text-center">
+<span class="material-symbols-outlined text-primary mb-2">favorite</span>
+<p class="font-label-sm text-label-sm">Empati</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-stack-lg overflow-hidden" id="showcase">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-stack-md">
+<div class="flex justify-between items-end">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-background mb-2">Hasil Pembelajaran HTML &amp; CSS</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Koleksi proyek pertama saya saat mengeksplorasi dunia web development.</p>
+</div>
+<div class="hidden md:flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors" onclick="document.getElementById('slider').scrollBy({left: -300, behavior: 'smooth'})">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors" onclick="document.getElementById('slider').scrollBy({left: 300, behavior: 'smooth'})">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex gap-gutter overflow-x-auto px-margin-mobile md:px-margin-desktop hide-scrollbar pb-stack-md snap-x" id="slider">
+<div class="min-w-[300px] md:min-w-[380px] snap-start">
+<div class="bg-white rounded-2xl overflow-hidden card-shadow h-full flex flex-col">
+<div class="h-48 bg-secondary-container p-8 flex items-center justify-center">
+<div class="w-full h-full bg-cover bg-center rounded-lg shadow-sm" data-alt="A clean and minimal digital visualization of a basic HTML profile page layout. The aesthetic is clinical with soft teal accents, featuring simple placeholders for name, bio, and education. Lighting is bright and professional, mimicking a high-fidelity digital interface designed by a student." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBireGeub3clTukYEfFlcwveSPi3OcNeMuzFvk0S0LoGSEOTtdqyXykK563g0a3yt6iMxMRDUFJzuB5mJrtyL3KMERPAVLe2En9zVsgeBNM1Yeteq-Yps5JjLZya6JQ-WJMTC86NFMkBgIDmTwWm0LmxulrrdpHH9P-knLTuKBiZ9EHKKvjQ-mzmPP_-TfzTWMsCQRSe3WWe1m8eh834LkFvhWl5HlPqxBPA6ch2NxJGcNSOqIvvkkZ')"></div>
+</div>
+<div class="p-6">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-sm text-label-sm mb-4 inline-block">HTML Murni</span>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Proyek 1: Halaman Biodata</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Struktur awal pengenalan tag HTML untuk menampilkan informasi personal.</p>
+<button class="mt-auto text-primary font-label-md text-label-md flex items-center gap-1 hover:gap-2 transition-all">
+                                Lihat Detail <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+<div class="min-w-[300px] md:min-w-[380px] snap-start">
+<div class="bg-white rounded-2xl overflow-hidden card-shadow h-full flex flex-col">
+<div class="h-48 bg-primary-container/10 p-8 flex items-center justify-center">
+<div class="w-full h-full bg-cover bg-center rounded-lg shadow-sm" data-alt="A sophisticated UI design for a health-focused BMI calculator application. The interface uses a palette of soft mint and medical teal, with crisp typography and elegant slider components. The background is a clean, bright white, suggesting a professional medical technology environment. High-key lighting creates a fresh and reliable feel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCgxDGn-2tob3-2JlnfDbZD7Y9IM4DNwLxorPSghR6jwhwmWAptNpbsf99CpF5vAWp6r0B4J9kWhEdmYCoXFZykPyVOQH5lhVI4d1p5ZS02DXo8dJWsyzTfD7RgCSCAWVZDdYuNnQijyKBlUMJqo4eSk7N9tBRNWswvRPI-j14NtUHbYruNWbck3pEV3SKRuZNhDD7eA3FelBg9NSNUwTUrlO9-OhMz312BhQFvrr7hLhi0O1l8veMC')"></div>
+</div>
+<div class="p-6">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-sm text-label-sm mb-4 inline-block">HTML + CSS Layout</span>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Proyek 2: Kalkulator BMI</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Menggabungkan logika perhitungan sederhana dengan penataan layout yang rapi.</p>
+<button class="mt-auto text-primary font-label-md text-label-md flex items-center gap-1 hover:gap-2 transition-all">
+                                Lihat Detail <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+<div class="min-w-[300px] md:min-w-[380px] snap-start">
+<div class="bg-white rounded-2xl overflow-hidden card-shadow h-full flex flex-col">
+<div class="h-48 bg-secondary-container/30 p-8 flex items-center justify-center">
+<div class="w-full h-full bg-cover bg-center rounded-lg shadow-sm" data-alt="A detailed digital rendering of a medical registration form interface. It features clean input fields with soft teal borders, clear hierarchy, and a professional health-clinic aesthetic. The mood is calm and efficient, utilizing plenty of whitespace and a palette of medical-inspired blues and greens under soft gallery lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWSaYNuf8HwRHz_rgW8sDDB_GxhtOo9bjfGFOIIHHZJd2XRfbaQM6WZD-L73nmfilIrsqQxmh3N1GlJyyBbF8S9ZYt2V4Tl93iqE3obWKoZP2Z-Li5cTAirFPiNnkUbE0kVEsAX6YqkXXJaWUQlWTJWazVFHuUb8lziKo3zQEBRD0HiVFMY1ekrrR0ASYdoNywSWp1vuhuhQUAOLgoPaxPuKwPPvrH6T3ypYNPnqYZDk_tc_v5rh6K')"></div>
+</div>
+<div class="p-6">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-sm text-label-sm mb-4 inline-block">HTML Form + CSS</span>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Proyek 3: Form Pendaftaran Klinik</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Belajar membuat interaksi formulir yang user-friendly untuk kebutuhan medis.</p>
+<button class="mt-auto text-primary font-label-md text-label-md flex items-center gap-1 hover:gap-2 transition-all">
+                                Lihat Detail <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+<div class="min-w-[300px] md:min-w-[380px] snap-start">
+<div class="bg-white rounded-2xl overflow-hidden card-shadow h-full flex flex-col border-2 border-primary">
+<div class="h-48 bg-primary-container p-8 flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+
+</div>
+<div class="w-full h-full bg-cover bg-center rounded-lg shadow-lg relative z-10" data-alt="A high-end personal portfolio website showcase, featuring a modern glassmorphism effect and bento grid layout. The colors are medical teal and pristine white. The design is sleek, academic, and professional, reflecting a high-achieving student's digital presence. The lighting is ethereal and soft, highlighting the depth and layers of the UI." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCUeMk6eTc3-P5pRj-fnRnOXhpDLP_4YpwnAgtLK86OPVAqTQuD7l_uIUzvF5ZcnDhHS4Gxn3yHP_orISKlrFRLF5bFxytiRmpmUPzJXUACbncZ87gQro4TZzcJRCJtXrqMBn1dWQ_FSYNnExh80bqOT30Z7Ong7N7sFSfHdRGdAlYxJ6ScOFt1dSK-_NnqCPwAG6GB0YhSePN7kMTWzjOElxyM_aZDIivPaL-Slo_uUWPA0MaheD7F')"></div>
+</div>
+<div class="p-6">
+<span class="px-3 py-1 bg-primary text-on-primary rounded-full font-label-sm text-label-sm mb-4 inline-block">HTML + Advance CSS</span>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Proyek 4: Website Portofolio Ini</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Penerapan teknik CSS tingkat lanjut termasuk grid, flexbox, dan animasi.</p>
+<button class="mt-auto text-primary font-label-md text-label-md flex items-center gap-1 hover:gap-2 transition-all">
+                                Lihat Detail <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<div class="bg-primary text-on-primary rounded-[32px] p-12 md:p-20 relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Mari Berdiskusi!</h2>
+<p class="font-body-lg text-body-lg mb-stack-md max-w-xl mx-auto opacity-90">
+                            Saya sangat terbuka untuk berkolaborasi atau sekadar berbagi pengalaman tentang studi medis dan coding.
+                        </p>
+<a class="inline-flex items-center gap-3 px-10 py-5 bg-white text-primary rounded-full font-headline-sm text-headline-sm hover:bg-secondary-container transition-all active:scale-95" href="mailto:hello@vanessa.id">
+                            Kirim Pesan
+                            <span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest w-full py-stack-md">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-4 md:mb-0">
+<span class="font-headline-sm text-headline-sm text-inverse-on-surface dark:text-on-surface font-bold tracking-tight">Vanessa.</span>
+<p class="font-body-md text-body-md text-inverse-on-surface/80 dark:text-on-surface/80 mt-1">© 2026 Vanessa. Aspiring Physician &amp; Developer.</p>
+</div>
+<div class="flex gap-6 items-center">
+<a class="font-body-md text-body-md text-inverse-on-surface/80 dark:text-on-surface/80 hover:text-tertiary-fixed transition-colors" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-inverse-on-surface/80 dark:text-on-surface/80 hover:text-tertiary-fixed transition-colors" href="#">GitHub</a>
+<a class="font-body-md text-body-md text-inverse-on-surface/80 dark:text-on-surface/80 hover:text-tertiary-fixed transition-colors" href="#">ResearchGate</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and effects
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add header shadow on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>
